@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1> fundamentos javascript</h1>
+  <script scr="js/modulos.js" type="module"></script>
+  <script>
+    class Animal {
+      constructor(nombre, edad) {
+        this.nombre = nombre
+        this.edad = edad;
+      }
+      hablar() {
+        console.log("soy animal y hago ruido");
+      }
+
+    }
+    class humano extends Animal {
+      constructor(nombre, edad, genero) {
+        super(nombre, edad);
+        this.genero = genero;
+      }
+      hablar() {
+        console.log("puedo hablar soy humano")
+      }
+    }
+    class perro extends Animal {
+      constructor(nombre, edad, tamanio) {
+        super(nombre, edad);
+        this.genertamanio = tamanio;
+      }
+      ladrar() {
+        console.log("gua gua")
+      }
+    }
+    let marcelo = new humano("marcelo", 35, "hombre"),
+      lukas = new perro("luka", 1, "grande");
+    marcelo.hablar();
+    lukas.hablar();
+    lukas.ladrar();
+  </script>
+</body>
+
+</html>
